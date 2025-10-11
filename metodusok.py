@@ -2,17 +2,11 @@ import colorama
 import time
 import os
 from colorama import Fore, Back, Style
-class gyak:
-    def __init__(self, szoveg, szin):
-        self.szoveg = szoveg
-        self.cim = szin
+
+
 os.system('cls' if os.name == 'nt' else 'clear') # console kitorles
 lyrics = open("lyrics.txt", "r", encoding="utf-8")
 beolvasva = lyrics.read()
-
-bevitel = gyak(lyrics.read(), "blue")
-
-
 sorszamok = []
 szavak = []
 mondatok = beolvasva.split("\n")
