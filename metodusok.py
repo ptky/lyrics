@@ -34,7 +34,6 @@ def run():
         print() #ha lefutott a ciklus egy ures sor kell 
 run()
 
-
 debug = True
 
 if debug == True:
@@ -44,3 +43,10 @@ if debug == True:
     print("--------------------")
     print(betuk)
     
+def lyrics_easiest_version():
+    file = open("lyrics.txt", encoding="utf-8")
+    beolvas = file.read()
+    for i in beolvas:
+        time.sleep(0.1)
+        print("\033[1m" + Fore.RED + i + "\033[0m", end="", flush=True) # ezt a flush = truet a chatgpttol szedtem, mert nem akart mukodni (betunkent irja ki nem soronkent)
+
